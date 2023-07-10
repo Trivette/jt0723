@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Rental Agreement Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>Get a list of the available tools <a href="/tools">All tools</a></p>
+    <h1>Submit a Rental Application</h1>
+    <form action="#" th:action="@{/rental}" th:object="${RentalRequestDTO}" method="post">
+        <p>Tool Code: <input type="text" th:field="*{toolCode}" /></p>
+        <p>Number of Days Required (1+): <input type="number" th:field="*{days}" /></p>
+        <p>Start Date: <input type="date" th:field="*{startDate}"/></p>
+        <p>Discount (0-100): <input type="number" th:field="*{discount}"/></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>

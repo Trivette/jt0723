@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Rental Agreement</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Rental Agreement</h1>
+<p th:text="'id: ' + ${rent.id}" />
+<p th:text="'Due Date: ' + ${rent.dueDate}" />
+<a href="/">Submit another rental request</a>
+</body>
+</html>
